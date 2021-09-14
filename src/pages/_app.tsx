@@ -15,12 +15,12 @@ const App = ({Component, pageProps}: AppProps): ReactElement => {
                 keywords={pkg.keywords}
                 icon="/favicon.ico"
                 facebook={{
-                    image: "https://adobe-searches.bradgarropy.vercel.app/facebook.png",
-                    url: "https://adobe-searches.bradgarropy.vercel.app",
+                    image: "https://adobe-searches.vercel.app/facebook.png",
+                    url: "https://adobe-searches.vercel.app",
                     type: "website",
                 }}
                 twitter={{
-                    image: "https://adobe-searches.bradgarropy.vercel.app/twitter.png",
+                    image: "https://adobe-searches.vercel.app/twitter.png",
                     site: "@bradgarropy",
                     card: "summary",
                 }}
