@@ -2,6 +2,13 @@
 
 _During an interview with [Adobe][adobe], I was asked to create a search bar with recent searches. Getting the user experience just right on this one was a lot of fun!_
 
+[![vercel][vercel-badge]][vercel]
+[![github actions][github-actions-badge]][github-actions]
+[![codecov][codecov-badge]][codecov]
+[![contributing][contributing-badge]][contributing]
+[![contributors][contributors-badge]][contributors]
+[![discord][discord-badge]][discord]
+
 ## ❓ question
 
 Reimplement the recent searches feature of the search bar found on the [Adobe Stock][adobe-stock] website.
@@ -23,13 +30,6 @@ cd adobe-searches
 npm install
 npm start
 ```
-
-[![vercel][vercel-badge]][vercel]
-[![github actions][github-actions-badge]][github-actions]
-[![codecov][codecov-badge]][codecov]
-[![contributing][contributing-badge]][contributing]
-[![contributors][contributors-badge]][contributors]
-[![discord][discord-badge]][discord]
 
 ## ✨ contributors
 
