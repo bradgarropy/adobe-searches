@@ -1,6 +1,28 @@
 # 🔎 adobe searches
 
-_A base starter with formatting, linting, serverless, CSS in JS, and SEO included._
+_During an interview with [Adobe][adobe], I was asked to create a search bar with recent searches. Getting the user experience just right on this one was a lot of fun!_
+
+## ❓ question
+
+Reimplement the recent searches feature of the search bar found on the [Adobe Stock][adobe-stock] website.
+
+![search bar][search-bar]
+
+## 🤔 assumptions
+
+I made two assumptions to simplify the problem.
+
+-   Recent searches would be persisted across page loads.
+-   The autocomplete feature did not exist.
+
+## 💀 execution
+
+```bash
+git clone https://github.com/bradgarropy/adobe-searches.git
+cd adobe-searches
+npm install
+npm start
+```
 
 [![vercel][vercel-badge]][vercel]
 [![github actions][github-actions-badge]][github-actions]
@@ -37,3 +59,6 @@ _A base starter with formatting, linting, serverless, CSS in JS, and SEO include
 [contributors-badge]: https://img.shields.io/github/all-contributors/bradgarropy/adobe-searches?style=flat-square
 [discord]: https://bradgarropy.com/discord
 [discord-badge]: https://img.shields.io/discord/748196643140010015?style=flat-square
+[adobe]: https://www.adobe.com
+[adobe-stock]: https://stock.adobe.com
+[search-bar]: images/search-bar.png

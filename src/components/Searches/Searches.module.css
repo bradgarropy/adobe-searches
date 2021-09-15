@@ -12,7 +12,6 @@
     display: grid;
     grid-auto-flow: row;
     row-gap: 0.75rem;
-    justify-items: start;
     font-size: 1rem;
 }
 
@@ -23,7 +22,12 @@
     text-decoration: none;
 }
 
+.search:hover {
+    color: var(--blue);
+}
+
 .clearButton {
+    text-align: start;
     margin-top: 1rem;
     background: none;
     border: none;
