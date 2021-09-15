@@ -1,12 +1,49 @@
 .searches {
     background-color: var(--white);
-    border: 0.1rem solid var(--offBlack);
-    padding: 0.5rem 1rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
     border-radius: 0.3rem;
+    border: none;
+    min-width: 30rem;
+    padding: 1rem 2rem;
+    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+        0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+        0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 0.75rem;
+    justify-items: start;
+    font-size: 1rem;
 }
 
 .search {
     padding: 0rem;
     margin: 0rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.clearButton {
+    margin-top: 1rem;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    color: var(--blue);
+}
+
+.clearButton:hover {
+    cursor: pointer;
+}
+
+.header {
+    color: var(--grey);
+}
+
+.empty {
+    padding: 0rem;
+    margin: 0rem;
+    font-style: italic;
+    color: var(--grey);
 }

@@ -1,21 +1,44 @@
-import {FC} from "react"
+import {useSearch} from "hooks"
+import React, {FC} from "react"
 
 import styles from "./Searches.module.css"
 
-type SearchesProps = {
-    searches: string[]
-}
+const Searches: FC = () => {
+    const searchCtx = useSearch()
 
-const Searches: FC<SearchesProps> = ({searches}) => {
+    const onClick = () => {
+        searchCtx.clearSearches()
+    }
+
     return (
         <div className={styles.searches}>
-            {searches.map((search, index) => {
-                return (
-                    <p key={index} className={styles.search}>
-                        {search}
-                    </p>
-                )
-            })}
+            <span className={styles.header}>Recent searches</span>
+
+            {searchCtx.searches.length ? (
+                <>
+                    {searchCtx.searches.map((search, index) => {
+                        return (
+                            <a
+                                key={index}
+                                className={styles.search}
+                                href={`/?query=${search}`}
+                            >
+                                {search}
+                            </a>
+                        )
+                    })}
+
+                    <button
+                        type="button"
+                        className={styles.clearButton}
+                        onClick={onClick}
+                    >
+                        Clear
+                    </button>
+                </>
+            ) : (
+                <p className={styles.empty}>No recent searches</p>
+            )}
         </div>
     )
 }

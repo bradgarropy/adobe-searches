@@ -1,3 +1,5 @@
+import {SearchCtx} from "context"
+
 const mockMeta = {
     title: "🔎 adobe searches",
 }
@@ -18,4 +20,20 @@ const mockTwitter = {
     image: "https://adobe-searches.vercel.app/twitter.png",
 }
 
-export {mockFacebook, mockMeta, mockTwitter}
+const mockSearchCtx: SearchCtx = {
+    addSearch: jest.fn(),
+    clearSearches: jest.fn(),
+    query: "",
+    searches: ["one", "two", "three"],
+    setQuery: jest.fn(),
+}
+
+const mockEmptySearchCtx: SearchCtx = {
+    addSearch: jest.fn(),
+    clearSearches: jest.fn(),
+    query: "",
+    searches: [],
+    setQuery: jest.fn(),
+}
+
+export {mockEmptySearchCtx, mockFacebook, mockMeta, mockSearchCtx, mockTwitter}

@@ -5,6 +5,7 @@ body {
     --gray: #757575;
     --offBlack: #111111;
     --black: #000000;
+    --blue: #4285f4;
 
     /* aliases */
     --grey: var(--gray);
@@ -18,6 +19,6 @@ body {
 }
 
 .container {
-    margin: auto;
+    margin: 5rem auto;
     max-width: 1000px;
 }
