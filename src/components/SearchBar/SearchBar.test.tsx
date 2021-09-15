@@ -1,6 +1,7 @@
 import userEvent from "@testing-library/user-event"
 import SearchBar from "components/SearchBar"
 import {SearchContext, SearchProvider} from "context"
+import {useSearch} from "hooks"
 import {mockSearchCtx} from "test-utils/mocks"
 import {render, screen, waitFor} from "test-utils/render"
 
@@ -48,28 +49,20 @@ test("shows and hides recent searches", () => {
 })
 
 test("searches", () => {
-    jest.mock("hooks/useSearch", () => {
-        const originalUseSearch = jest.requireActual("hooks/useSearch")
-
-        //Mock the default export and named export 'foo'
-        return {
-            __esModule: true,
-            ...originalUseSearch,
-            addSearch: jest.fn(),
-        }
-    })
+    const searchCtx = useSearch()
+    jest.spyOn(searchCtx, "addSearch")
 
     render(
-        <SearchContext.Provider value={mockSearchCtx}>
+        <SearchProvider>
             <SearchBar />
-        </SearchContext.Provider>,
+        </SearchProvider>,
     )
 
     userEvent.type(screen.getByPlaceholderText("Search"), "test{enter}")
 
     waitFor(() => {
         expect(screen.queryByText("Recent searches")).not
-        expect(mockSearchCtx.addSearch).toHaveBeenCalledTimes(1)
-        expect(mockSearchCtx.addSearch).toHaveBeenCalledWith("test")
+        expect(searchCtx.addSearch).toHaveBeenCalledTimes(1)
+        expect(searchCtx.addSearch).toHaveBeenCalledWith("test")
     })
 })
