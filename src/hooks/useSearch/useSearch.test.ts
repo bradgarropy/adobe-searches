@@ -1,7 +1,7 @@
 import {renderHook} from "@testing-library/react-hooks"
-import { useSearch } from "hooks"
+import {useSearch} from "hooks"
 
-test("renders hook", () => {
+test("returns context", () => {
     const {result} = renderHook(() => useSearch())
-    expect(result.current).toBeUndefined()
+    expect(result.current).toEqual({})
 })
